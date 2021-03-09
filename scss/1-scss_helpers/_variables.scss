@@ -1,0 +1,90 @@
+// Breakpoints
+// =========================================================
+$breakpoints: ("": "",
+"xs": 575px,
+"sm": 576px,
+"md": 768px,
+"lg": 992px,
+"xl": 1200px,
+) !default;
+ 
+
+
+
+//  Color palette 
+// =============================================================
+$color-white: #ffffff !default;
+$color-black: #000000 !default;
+
+// Declaring the primary color.
+$color-primary:  #F70C0C !default;
+ 
+// Gray Shade 
+$color-gray: #8E8BA0 !default;
+$color-gray-100: #E3E5EA !default;
+$color-gray-400: #706E80 !default;
+
+// Dark Shade 
+$color-dark: #131313 !default;
+$color-dark-500: #191919 !default;
+ 
+ 
+//border-color
+$border-primary: #F70C0C !default;
+$border-red: #D40A0A !default;
+$border-black: #000000 !default;
+$border-brown: #332323 !default;
+$border-dark: #202020 !default;
+$border-dark-400: #313339 !default;
+$border-dark-500: #0E0E0E !default;
+
+// base font settings
+// =============================================================
+$base-unit: 16 !default;
+$base-line-height: 1rem !default;
+ 
+// fonts family
+// =============================================================
+$font-heading: 'Brotherhood' !default;
+// $font-heading: 'Karla', sans-serif !default;
+$font-body: 'Karla', sans-serif !default;
+
+ 
+// font family all
+// =============================================================
+$font-all: $font-body !default;
+ 
+// font Size
+// =============================================================
+$h1-font-size: rem(100) !default;
+$h2-font-size: rem(70) !default;
+$h3-font-size: rem(28) !default;
+$h4-font-size: rem(24) !default;
+$h5-font-size: rem(21) !default;
+$p-font-size: rem(16) !default;
+$body-font-size: rem(16) !default;
+
+// font line height
+// =============================================================
+$h1-line-height: rem(100) !default; 
+$h2-line-height: rem(68) !default; 
+$h3-line-height: rem(40) !default; 
+$h4-line-height: rem(32) !default; 
+$h5-line-height: rem(24) !default; 
+$p-line-height: rem(26) !default;
+$body-line-height: rem(24) !default;
+ 
+// "UL/ OL/ LI" line height
+$list-line-height: rem(34) !default;
+ 
+// Spacer
+// =============================================================
+$standard-space: $base-line-height * 8.125 !default;//(130)
+ 
+// Box layout width
+// =============================================================
+$box-layout-width: 1366px !default;
+
+
+
+                                    

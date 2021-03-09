@@ -1,0 +1,19 @@
+.hero{
+    padding-top: rem(150);
+    padding-bottom: rem(100);
+    @include breakpoint-min(md){
+        padding-top: rem(200);
+        padding-bottom: rem(90);
+    }
+    @include breakpoint-min(xl){
+        padding-bottom: rem(200);
+    }
+    &-content{
+
+    }
+    &--full{
+        @include breakpoint-min(xl){
+            min-height: 100vh;
+        }
+    }
+}

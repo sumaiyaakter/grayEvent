@@ -1,0 +1,10 @@
+
+.section-title{
+    hr{
+        background: $color-primary;
+        height: rem(4);
+        width: rem(38);
+        margin:rem(30) auto 0 auto;
+        @extend .rounded--default;
+    }
+}

@@ -1,0 +1,139 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-body;
+  @extend %heading-text-color;
+}
+
+h1 {
+  @extend .h1-font;
+  font-family: $font-heading;
+}
+
+h2 {
+  @extend .h2-font;
+  font-family: $font-heading;
+}
+
+h3 {
+  @extend .h3-font;
+
+}
+
+h4 {
+  @extend .h4-font;
+}
+
+h5 {
+  @extend .h5-font;
+}
+
+p {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-family: $font-body;
+  font-size: rem(16);
+  color: $color-gray;
+}
+
+ul {
+  li {
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+      padding-bottom: 3px;
+    }
+  }
+}
+
+
+
+/**! ----- font Setting (size & line height, spacing etc) ---- **/
+.h1-font {
+    font-size: rem(45);
+    line-height: $h2-line-height;
+    @include breakpoint-min(md) {
+      line-height: $h1-line-height;
+      font-size: $h1-font-size;
+    }
+}
+ 
+.h2-font {
+  font-size: rem(50);
+    @include breakpoint-min(md) {
+      font-size: $h2-font-size;
+      line-height: $h2-line-height;
+    }
+}
+.h3-font {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  font-weight: 400;
+  @include breakpoint-min(md) {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+  }
+}
+.h4-font {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  font-weight: 700;
+}
+.h5-font {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+  font-weight: 700;
+}
+.body-font {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+  
+.font-s{
+  &--16 {
+    font-size: rem(16);
+  }
+  &--18 {
+    font-size: rem(18);
+  }
+  &--21 {
+    font-size: rem(21);
+  }
+  &--48 {
+    font-size: rem(48);
+  }
+  &--80 {
+    font-size: rem(80);
+  }
+}
+
+/**! ----- Font weight ---- **/
+.font-w {
+  &--400 {
+    font-weight: 400 !important;
+  }
+  &--700 {
+    font-weight: 700 !important;
+  }
+}
+
+/**! ----- Line Height ---- **/
+.line-height{
+  &--22{
+    line-height: rem(22);
+  }
+}
+

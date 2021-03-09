@@ -1,0 +1,168 @@
+/**! ----- border radius---- **/
+.rounded{
+    &--default{
+        border-radius: rem(5);
+    }
+    &--3{
+        border-radius: rem(3);
+    }
+    &--full{
+        border-radius: rem(100);
+    }
+    &-0{
+        border-radius: rem(0);
+    }
+}
+
+/**! ----- Opacity ---- **/
+
+/**! ----- box shadow ---- **/
+.box-shadow{
+    &--none{
+        box-shadow: none;
+    }
+}
+
+
+
+/**! -----  Width ---- **/
+.w--20{
+    @include breakpoint-min(md){
+        width: 20%;
+    }
+}
+
+/**! -----  Height ---- **/
+.h-100vh{
+    height:100vh;
+}
+.h-100{
+    height: 100%;
+}
+
+/**! ----- background ---- **/
+.background-none{
+    background: none;
+}
+
+/**! ----- overflow---- **/
+.hidden {
+    overflow: hidden;
+}
+
+/**! ----- Z Index ---- **/
+.z-index1 {
+    z-index: 1;
+}
+.z-index2 {
+    z-index: 2;
+}
+.z-index3 {
+    z-index: 3;
+}
+.z-index-1 {
+    z-index: -1;
+}
+.z-index-2 {
+    z-index: -2;
+}
+
+/**! ----- transition ---- **/
+.transition-default {
+    transition: .3s;
+}
+
+/**! ----- text-transform ---- **/
+.text-t--capitalize{
+    text-transform: capitalize;
+}
+.text-t--uppercase{
+    text-transform: uppercase;
+}
+
+/**! ----- Position ---- **/
+.pos-abs-bottom-left{
+    @include pos-abs(auto, auto, 0, 0);
+}
+.pos-abs-bottom-right{
+    @include pos-abs(auto, 0, 0, auto);
+}
+.pos-abs-top-right{
+    @include pos-abs(0, 0, auto, auto);
+}
+.pos-abs-top-left{
+    @include pos-abs(0, auto, auto, 0);
+}
+.pos-abs-right{
+    @include pos-abs(auto, 0, auto, auto);
+}
+.pos-abs-left{
+    @include pos-abs(auto, auto, auto, 0);
+}
+.pos-abs-bottom{
+    @include pos-abs(auto, auto, 0, auto);
+}
+
+
+/**! ----- Remove Margin and padding (spacing) from the first and last child---- **/
+.remove-space--bottom> {
+ 
+    li,
+    div {
+        &:last-child {
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+  
+}
+
+.remove-space-border--bottom> {
+    div {
+        &:last-child {
+           border-bottom: 0 !important;
+        }
+    }
+}
+
+.remove-space--right> {
+    li,
+    div,
+    span {
+        &:last-child {
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+}
+
+
+/**! ----- Negative Margin/Padding ---- **/
+.mb-n1{
+    &--20{
+        margin-bottom: rem(-20);
+    }
+}
+
+
+/**! ----- Border ---- **/
+.border{
+    @extend %border-color;
+    &-top,
+    &-bottom ,
+    &-left,
+    &-right{
+        @extend %border-color;
+    }
+    &--none {
+        border: 0;
+    }
+    &--2{
+        border-width: rem(2);
+    }
+    &--3{
+        border-width: rem(3);
+    }
+
+}
+

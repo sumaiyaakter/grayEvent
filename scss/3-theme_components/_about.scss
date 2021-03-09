@@ -1,0 +1,39 @@
+.about{
+    padding-top: rem(145);
+    padding-bottom: rem(205);
+    @include breakpoint-min(md){
+        padding-top: rem(160);
+        padding-bottom: rem(265);
+    }
+    @include breakpoint-min(xl){
+        padding-top: 290px;
+        padding-bottom: 310px;
+    }
+    .svg-shape--2{
+        top: rem(-285);
+        left: rem(-95);
+        @media only screen and (min-width: 2000px) {
+            left: 0;
+            .svg{
+                width: 100%;
+            }
+        }
+    }
+    .svg-shape{
+        bottom: rem(-220);
+        left: rem(-115);
+        @include breakpoint-min(lg){
+            bottom: rem(-180);
+        }
+        @include breakpoint-min(xl){
+            left: rem(-115);
+        }
+        @media only screen and (min-width: 2000px) {
+            left: 0;
+            .svg{
+                width: 100%;
+            }
+        }
+    }
+    
+}

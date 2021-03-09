@@ -1,0 +1,260 @@
+.navbar-expand-lg {
+ 
+    .navbar-btn {
+        @media only screen and (max-width: 400px) {
+            display: none;;
+        }
+    }
+    &.navbar {
+        padding: rem(10) 0;
+        &.position-absolute{
+            z-index: 999;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        &>.container{
+            @media screen and (max-width:575px){
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            &-fluid{
+                padding-left: rem(23);
+                padding-right: rem(50);
+            }
+        }
+    
+        .navbar-nav {
+            align-items: center;
+            @include breakpoint-max(lg){
+                padding-top: 30px;
+                align-items: flex-start;
+            }
+          
+            .nav-item {
+                position: relative;
+                padding-left: rem(22);
+                padding-right: rem(22);
+                @include breakpoint-max(lg){
+                    border-bottom: 1px solid #eeeeef;
+                    width: 100%;
+                }
+               
+                .nav-link{
+                    font-size: rem(15);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding: rem(30) rem(0);
+                    position: relative;
+                    z-index: 1;
+                    @include breakpoint-max(lg){
+                        padding: rem(20) 0;
+                    }
+                    // Hover style
+                    &:before,
+                    &:after {
+                      position: absolute;
+                      -webkit-transition: all 0.35s ease;
+                      transition: all 0.35s ease;
+                    }
+                    &:before {
+                        bottom: 0;
+                        display: block;
+                        height: 3px;
+                        width: 0%;
+                        content: "";
+                        background-color: $color-primary;
+                        @include breakpoint-max(lg){
+                          left: rem(-21);
+                        }
+                    }
+                    &:after {
+                        left: 0;
+                        top: rem(30);
+                        padding: 0;
+                        position: absolute;
+                        content: attr(data-hover);
+                        color: $color-primary;
+                        white-space: nowrap;
+                        max-width: 0%;
+                        overflow: hidden;
+                        @include breakpoint-max(lg){
+                            top: rem(20);
+                        }
+                    }
+                    &:hover:before {
+                      opacity: 1;
+                      width: 100%;
+                      @include breakpoint-max(lg){
+                        width: 120%;
+                      }
+                    }
+                    &:hover:after {
+                      max-width: 100%;
+                    }
+                    // Hover style end
+                 }
+
+            }
+        }
+        .navbar-brand{
+            margin-right: 0;
+        }
+      
+
+        /* Toggle */
+        .navbar-toggler {
+            @include breakpoint-max(lg ){
+            position: absolute;
+            background-image: none;
+            border: 0;
+            right: 0;
+            width: rem(60);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+
+            @media only screen and (max-width: 400px){
+                top: rem(20);
+            }
+             >span.navbar-toggler-icon{
+                position: absolute;
+            }
+            &-icon {
+                transition: .5s;
+                position: absolute;
+                background-image: none !important;
+                height: rem(3);
+                top: rem(-11);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background: $color-dark;
+               
+                &:before, 
+                &:after {
+                    background: $color-dark;
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    transition: .5s;
+                }
+                &:before {
+                    top: rem(16);
+                }
+                &:after {
+                    top: rem(8);
+                }
+
+                &.active {
+                    background-color: transparent !important;
+                    transform: scale(0.85) rotate(90deg);
+                    &:before {
+                        background: $color-dark;
+                        transform: rotate(45deg);
+                        top: 0;
+                    }
+                    &:after {
+                        background: $color-dark;
+                        top: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                
+            }
+        }
+        }
+
+        /* navbar light */
+        &-light{
+            .nav-link{
+                &:hover{
+                    color: $color-primary;
+                }
+                @include breakpoint-min(lg){
+                    color: $color-white;
+                   
+                    &:focus{
+                        color: $color-white;
+                    }
+                }
+            }
+            .navbar-toggler-icon{
+                background: $color-white;
+                   
+                &:before, 
+                &:after {
+                    background: $color-white;
+                }
+            }
+        }
+      
+    }
+ 
+    
+
+    /*------------ mobile menu ------------*/
+    .navbar-inner {
+        @include breakpoint-max(lg){
+            position: fixed;
+            z-index: 999;
+            right: -100%;
+            background: $color-white; 
+            height: 100%;
+            top: 0;
+            width: rem(270);
+            transition: .5s;
+           
+            &.active {
+                right: 0;
+            }
+            .navbar-toggler{
+                right: rem(10);
+                top: rem(10);
+                position: absolute;
+                height: 2.5rem;
+              
+            }
+        
+        }
+    }
+}
+
+/*------------ mobile menu ------------*/
+.scroll-prevent {
+    @include breakpoint-max(lg){
+        overflow: hidden;
+        .main{
+            overflow: hidden;
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+.main:before{
+    @include breakpoint-max(lg){
+        position: fixed;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.5);
+        z-index: 3;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+    }
+    @include breakpoint-min(lg){
+        opacity: 0;
+    }
+}
+

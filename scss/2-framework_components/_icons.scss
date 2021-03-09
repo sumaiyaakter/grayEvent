@@ -1,0 +1,72 @@
+/**! ----- Icon with Background ---- **/
+// MARKUP:
+// <span class="icon--lg">
+// <i class="nc-icon nc-p-system-update"></i>
+// </span>
+
+.icon{
+    &--xl{
+        // height: rem(124);
+        // width: rem(124);
+        // font-size: rem(45);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @extend .rounded--full;
+    }
+    &--lg{
+     
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &--md{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/**! ----- Icon Font Size ---- **/
+.icon{
+    &--2x{
+        i{
+            // font-size: rem();
+        }
+    }
+    &--3x{
+        i{
+            // font-size: rem();
+        }
+    }
+    &--4x{
+        i{
+            // font-size: rem();
+        }
+    }
+}
+
+/**! ----- Icon group ---- **/
+.icon-group{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+        padding-right: rem(8);
+
+    }
+}
+
+/**! ----- Icon rounded ---- **/
+.icon-rounded{
+    i{
+        // height: rem(24);
+        // width: rem(24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @extend .rounded--full;
+      
+    }
+}

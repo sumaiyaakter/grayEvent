@@ -1,0 +1,34 @@
+.schedule{
+    padding-top: rem(50);
+    padding-bottom: rem(100);
+    @include breakpoint-min(md){
+        padding-top: rem(115);
+        padding-bottom: rem(150);
+    }
+    @include breakpoint-min(xl){
+        padding-top: rem(200);
+        padding-bottom: rem(330);
+    }
+    .svg-shape{
+        left: rem(-125);
+        bottom: rem(-430);
+        @include breakpoint-min(lg){
+            bottom: rem(-320);
+        }
+        @include breakpoint-min(xl){
+            bottom: rem(-200);
+        }
+        @media only screen and (min-width: 2000px) {
+            left: 0;
+            .svg{
+                width: 100%;
+            }
+        }
+        @media only screen and (min-width: 2000px) {
+            left: 0;
+            .svg{
+                width: 100%;
+            }
+        }
+    }
+}

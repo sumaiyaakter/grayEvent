@@ -1,0 +1,40 @@
+.tab-wrapper{
+    .tab-content{
+        border: 1px solid $border-dark-400;
+        img{
+            @extend .rounded--full;
+            border: 3px solid $border-dark;
+        }
+    }
+    .nav-tab{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include breakpoint-max(sm){
+            padding: 0 rem(30);
+        }
+        @include breakpoint-min(sm){
+            flex-direction: row;
+        }
+        .nav-item{
+            border: 1px solid $border-dark-400;
+            @include breakpoint-max(sm){
+               text-align: center;
+            }
+            .nav-link{
+                font-size: rem(16);
+                font-weight: 400;
+                color: $color-gray-400;
+                text-transform: capitalize;
+                padding: rem(10);
+                @include breakpoint-min(md){
+                    padding: rem(10) rem(18);
+                }
+                &.active{
+                    color: $color-white;
+                    background-color: $color-dark-500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/**! ----- Theme Common colors (Also Used as extend in SCSS ) ---- **/
+// bg primary
+%bg-primary {
+    background: $color-primary;
+}
+// color primary
+%color-primary {
+    color: $color-primary;
+}
+// fill primary
+%fill-primary {
+    fill: $color-primary;
+}
+// btn border color
+%btn-border-color-primary {
+    border-color: $color-primary;
+}
+/**! ----- Base Font Color ---- **/
+%heading-text-color {
+    color: $color-white;
+}
+%body-text-color {
+    color: $color-white;
+}
+
+// Dynamic border color which should be work with any background
+
+
+/**! ----- SVG fill Color ---- **/
+.fill--primary {
+    rect,
+    path,
+    polygon,
+    circle {
+        @extend %fill-primary;
+    }
+}
+
+// Border color:
+.border-color-primary {
+    @extend %btn-border-color-primary;
+}
+.border-color--brown {
+   border-color: $border-brown !important;
+}
+.border-color--black {
+   border-color: $border-black !important;
+}
+.border-color--dark--400 {
+   border-color: $border-dark-400 !important;
+}
+
+// ALL OTHER COLOR HELPER CLASSES. 
+.color-primary {
+    @extend %color-primary;
+}
+.color-white{
+    color: $color-white;
+}
+.color-black{
+    color: $color-black;
+}
+.color-dark{
+    color: $color-dark;
+}
+.color-gray{
+    color: $color-gray;
+}
+.color-gray--100{
+    color: $color-gray-100;
+}
+.color-gray--400{
+    color: $color-gray-400;
+}
+
+// BACKGROUND COLORS
+/**! ----- Background Color Helper ---- **/
+.bg-color--primary {
+    @extend %bg-primary;
+}
+.bg-color--black {
+    background-color: $color-black;
+}
+.bg-color--dark {
+    background-color: $color-dark;
+}
+.bg-color--dark--500 {
+    background-color: $color-dark-500;
+}

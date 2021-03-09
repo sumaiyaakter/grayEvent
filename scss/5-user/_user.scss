@@ -1,0 +1,54 @@
+
+// SCSS Import
+// =============================================================
+@import "typography.scss";
+@import "colors";
+@import "boxed-layout";
+
+// Init
+// =============================================================
+
+// 
+// Place your custom styles here/ below. 
+// This will make it much easier to update the template later - you'll only need to preserve "5-user" folder
+// ===================================================================================================
+
+// bg primary
+%bg-primary {
+    background: $color-primary;
+}
+// color primary
+%color-primary {
+    color: $color-primary;
+}
+// fill primary
+%fill-primary {
+    fill: $color-primary;
+}
+// btn border color
+%btn-border-color-primary {
+    border-color: $color-primary;
+}
+/**! ----- Base Font Color ---- **/
+%heading-text-color {
+    // color: $color-dark-700;
+    .section--dark &,
+    .bg-color--primary &{
+        &:not([class*='text-color-']):not([class*='color-']) {
+            color: $color-white;
+        }
+    }
+    
+}
+%body-text-color {
+    // color: $color-dark-400;
+}
+
+// Dynamic border color which should be work with any background
+%border-color {
+    border-color: $border-primary;
+
+    .section--dark & {
+        // border-color: $border-dark-2;
+    }
+}

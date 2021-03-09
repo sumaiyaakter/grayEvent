@@ -1,0 +1,52 @@
+.footer{
+    padding-top: rem(230);
+   
+    .svg-shape--2{
+        left: rem(-115);
+        top: rem(-160);
+        @include breakpoint-min(md){
+            top: rem(-160);
+        }
+        @include breakpoint-min(xl){
+            top: rem(-160);
+        }
+        @media only screen and (min-width: 2000px) {
+            left: 0;
+            .svg{
+                width: 100%;
+            }
+        }
+    }
+
+    .widget li a,
+    .footer-bottom-nav li a{
+        font-size: rem(16);
+        font-weight: 400;
+        color: $color-white;
+        @extend .transition-default;
+    }
+    .widget li a:hover,
+    .footer-bottom-nav li a:hover{
+
+        color: rgba($color-white, 0.5);
+    }
+   
+    .footer-top{
+        .widget{
+            li{
+                a{
+                   
+                    text-transform: capitalize;
+                    line-height: rem(36);
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        &-nav{
+            li{
+                padding-right: rem(35);
+            }
+        }
+    }
+}

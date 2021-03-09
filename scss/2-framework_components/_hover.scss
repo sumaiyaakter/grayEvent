@@ -1,0 +1,40 @@
+/**! ----- Button Hover ---- **/
+.btn{
+    &:after{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 0px;
+        z-index: -1;
+        border-radius: 5px;
+        content: '';
+        background: rgba($color-black, .05);
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    &:hover{
+        &::after{
+            left: 0%;
+            right: auto;
+            width: 100%;
+        }
+    }
+}
+
+
+/**! ----- Button Outline Hover ---- **/
+.btn-outline{
+    &:after{
+        background: rgba($color-white, 0.1);
+    }
+}
+
+/**! ----- Button color Hover ---- **/
+.btn-color--primary{
+    &:hover{
+        color: $color-primary;
+    }
+}
+
+

@@ -1,0 +1,76 @@
+.card-area{
+    padding-top: rem(100);
+    padding-bottom: rem(140);
+    @include breakpoint-min(md){
+        padding-top: rem(150);
+        padding-bottom: rem(150);
+    }
+    @include breakpoint-min(xl){
+        padding-top: rem(115);
+        padding-bottom: rem(330);
+    }
+    .svg-shape{
+        left: rem(-140);
+        bottom: rem(-300);
+        @include breakpoint-min(md){
+            bottom: rem(-300);
+        }
+        @include breakpoint-min(lg){
+            bottom: rem(-260);
+        }
+        @include breakpoint-min(xl){
+            bottom: rem(-140);
+        }
+        @media only screen and (min-width: 2000px) {
+            left: 0;
+            .svg{
+                width: 100%;
+            }
+        }
+    }
+
+    .card{
+        &-body{
+    
+        }
+        &:hover{
+            background-color: $color-primary;
+            .group-list li,
+            .card-header span{
+                color: $color-white;
+            }
+            .btn{
+                border-color: $color-white;
+            }
+            .card-header{
+                border-color: $border-red !important;
+            }
+        } 
+        &.card-active{
+            background-color: $color-primary;
+            .group-list li,
+            .card-header span{
+                color: $color-white;
+            }
+            .btn{
+                border-color: $color-white;
+            }
+            .card-header{
+                border-color: $border-red !important;
+            }
+        }
+        .group-list li,
+        .card-header,
+        .card-header span{
+            @extend .transition-default;
+        }
+        .group-list{
+            li{
+                font-size: rem(18);
+                font-weight: 400;
+                color: $color-gray;
+                line-height: rem(35);
+            }
+        }
+    }
+}
