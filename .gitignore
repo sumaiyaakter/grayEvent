@@ -1,9 +1,9 @@
 # Local Netlify folder
 .netlify
-*.debug.log
-*.grayevent.zip
-*.gulpfile.js
-*.package.json
-*.package-lock.json
-*.node_modules
+debug.log*
+grayevent.zip*
+.gulpfile.js
+.package.json
+.package-lock.json
+/node_modules
 
